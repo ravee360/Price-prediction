@@ -12,3 +12,4 @@ class Settings:
     REDIS_URL = os.getenv('REDIS_URL','redis://localhost:6379')
     MODEL_PATH = 'app/models/model.pkl'
     
+settings = Settings()
