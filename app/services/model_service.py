@@ -1,7 +1,7 @@
 ''' Load the trained model and do the predictions with redis caching'''
 import joblib
 import pandas as pd
-from app.cache.redis_cache import get_cache_prediction, set_cache_prediction
+from app.cache.redis_cache import get_cached_prediction, set_cached_prediction
 from app.core.config import settings
 
 model = joblib.load(settings.MODEL_PATH)
@@ -12,7 +12,7 @@ def predict_car_price(data: dict) -> dict:
     cache_key =" ".join([str(value) for value in data.values()])
     
     
-    cached_result = get_cache_prediction(cache_key)
+    cached_result = get_cached_prediction(cache_key)
     if cached_result:
         return cached_result
     
