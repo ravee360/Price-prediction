@@ -19,6 +19,6 @@ def predict_car_price(data: dict) -> dict:
     prediction = model.predict(input_df)
     result = {"predicted_price": prediction[0]}
     
-    set_cache_prediction(cache_key, result)
+    set_cached_prediction(cache_key, result)
     
     return result
