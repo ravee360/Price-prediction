@@ -1,10 +1,10 @@
-from fastAPI import FastAPI
+from fastapi import FastAPI
 from prometheus_fastapi_instrumentator import Instrumentator
 from app.api import routes_auth, routes_predict
 from app.middleware.logging_middleware import LoggingMiddleware
 from app.core.excetions import register_exception_handlers
 
-# Initialize FastAPI app
+
 app = FastAPI(title="Car Price Prediction API", version="1.0.0")
 app.add_middleware(LoggingMiddleware)
 
