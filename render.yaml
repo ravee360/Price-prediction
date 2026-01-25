@@ -1,0 +1,12 @@
+services:
+  - type : web
+    name : fastpi-car-price-prediction
+    env : docker
+    plan : free
+    branch : main
+    autoDeploy : true
+    dockerfilePath : ./Dockerfile
+    envVars:
+      - key : MODEL_PATH
+        value : app/models/model.joblib
+        
