@@ -10,3 +10,5 @@ scipy==1.16.3
 scikit-learn==1.7.2
 redis==7.1.0
 prometheus-client==0.24.1
+streamlit==1.30.0
+requests==2.31.0
